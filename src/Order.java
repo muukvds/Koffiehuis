@@ -21,16 +21,34 @@ public class Order {
         }
     }
 
-    public void addCoffee(Coffee coffee) {
+    public void addCoffee(String name,int size) {
         for (int i = 0; i < coffeeArray.length; i++) {
             if (coffeeArray[i] == null) {
-                coffeeArray[i] = coffee;
+                coffeeArray[i] = new Coffee(name,size);
                 break;
             }
         }
     }
 
-    public void print() {
+    public String listSugarFreeCake()
+    {
+        String list="";
+
+        for(Cake cake:cakeArray)
+        {
+            if(cake != null)
+            {
+                if(cake.isSugarFree())
+                {
+                    list += cake.getName() +"\n";
+                }
+            }
+        }
+
+        return list;
+    }
+
+    public void showOrder() {
         System.out.println("Tafelnummer: " + tableNumber);
 
         printCoffee();
@@ -50,7 +68,7 @@ public class Order {
         }
 
         System.out.println();
-        System.out.printf("Totaal: " + coffeeCount);
+        System.out.println("Totaal: " + coffeeCount);
         System.out.println();
     }
 
@@ -67,7 +85,7 @@ public class Order {
         }
 
         System.out.println();
-        System.out.printf("Totaal: " + cakeCount);
+        System.out.println("Totaal: " + cakeCount);
         System.out.println();
     }
 }
