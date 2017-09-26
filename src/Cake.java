@@ -7,12 +7,15 @@ public class Cake {
         this.sugarFree = sugarFree;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public boolean isSugarFree()
+    public void printCake()
     {
-        return sugarFree;
+        if(sugarFree)
+        {
+            System.out.println(name +" suikervrij");
+        }
+        else {
+            System.out.println(name);
+        }
+
     }
 }
