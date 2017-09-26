@@ -6,5 +6,13 @@ public class Cake {
         this.name = name;
         this.sugarFree = sugarFree;
     }
-    
+
+    public String getName() {
+        return name;
+    }
+
+    public boolean isSugarFree()
+    {
+        return sugarFree;
+    }
 }
