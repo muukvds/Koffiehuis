@@ -7,7 +7,7 @@ public class Cake {
         this.sugarFree = sugarFree;
     }
 
-    public void printCake()
+    public void print()
     {
         if(sugarFree)
         {

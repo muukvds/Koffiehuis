@@ -8,7 +8,7 @@ public class Coffee {
         this.size = size;
     }
 
-public void printCoffee()
+public void print()
 {
     String sizeString;
 
@@ -27,6 +27,6 @@ public void printCoffee()
                 sizeString = "middel";
     }
 
-    System.out.println(name +" "+sizeString);
+    System.out.println(name +" - "+sizeString);
 }
 }
